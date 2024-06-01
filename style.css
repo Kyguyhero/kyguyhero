@@ -1,0 +1,92 @@
+:root {
+    color-scheme: light dar;
+    --light-color1: white;
+    --light-color2: grey;
+    --dark-color1: black;
+    --dark-color2: darkgray;
+}
+
+html {
+    background-color: light-dark(--light-color1, --dark-color1);
+    display: flex;
+    justify-content: center;
+}
+
+#page {
+    display: grid;
+    gap: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    border: black solid 1px;
+    grid-template-rows: 96px 128px 128px;
+    grid-template-columns: 20vw 20vw 20vw 20vw; 
+    grid-template-areas: 
+        "logo nav nav nav"
+        "creator main main main"
+        "creator main main main"
+        ;
+}
+
+.item {
+    border: black solid 1px;
+    border-radius: 16px;
+    background-color: #FFEEFF;
+}
+
+#logo {
+    grid-area: logo;
+    display: flex;
+}
+
+#mainlogo {
+    width: 240px;
+    place-self: center;
+    margin: auto;
+}
+
+#nav {
+    grid-area: nav;
+}
+
+#creator {
+    grid-area: creator;
+}
+
+#main {
+    grid-area: main;
+}
+
+/* Phones */
+@media screen and (max-width: 480px) {
+    #page {
+        display: grid;
+        gap: 16px;
+        width: 400px;
+        grid-template-columns: 80vw;
+        grid-template-areas: 
+        "logo"
+        "nav"
+        "creator"
+        "main";
+    }
+
+    #logo {
+        min-width: 256px;
+    }
+}
+
+/* Tablets */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+}
+
+/* Laptops */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+}
+
+/* Desktop */
+@media screen and (min-width: 1025px) {
+
+}
